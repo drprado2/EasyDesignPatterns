@@ -3,4 +3,5 @@ mono: none
 dotnet: 2.0.0
 cache: dotnet
 script:
-    - dotnet restore && dotnet build && cd src/EasyDesignPatterns.Tests/ && dotnet test
+    - dotnet build
+    - cd src/EasyDesignPatterns.Tests/ && dotnet test
