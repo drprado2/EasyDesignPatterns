@@ -3,5 +3,6 @@ mono: none
 dotnet: 2.0.0
 cache: dotnet
 script:
-    - dotnet build
-    - cd src/EasyDesignPatterns.Tests/ && dotnet test
+    - dotnet restore -v q
+    - dotnet build --no-restore -v q
+    - dotnet test --no-build --no-restore -v q src/EasyDesignPatterns.Tests/EasyDesignPatterns.Tests.csproj
