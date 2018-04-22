@@ -17,6 +17,7 @@ namespace EasyDesignPatterns.Tests
         public void meu_teste_top()
         {
             var a= 245;
+            var b = "Some alteration";
             a.Should().Be(245);
         }
         [Fact]
