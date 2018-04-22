@@ -57,3 +57,13 @@ typings/
 # dotenv environment variables file
 .env
 
+.idea
+
+./src/EasyDesignPatterns.API/bin
+./src/EasyDesignPatterns.API/obj
+
+./src/EasyDesignPatterns.Tests/bin
+./src/EasyDesignPatterns.tests/obj
+
+./src/EasyDesignPatterns.Core/bin
+./src/EasyDesignPatterns.Core/obj
