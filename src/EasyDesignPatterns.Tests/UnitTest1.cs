@@ -10,14 +10,12 @@ namespace EasyDesignPatterns.Tests
         public void meu_teste_top()
         {
             var a= 245;
-            var b = "some alteration";
             a.Should().Be(245);
         }
         [Fact]
         public void outro_teste_maluco()
         {
             var a= 245;
-            var b = "some alteration";
             a.Should().Be(245);
         }
         [Fact]
