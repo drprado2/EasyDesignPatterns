@@ -25,6 +25,7 @@ namespace EasyDesignPatterns.Tests
         {
             var a= 245;
             var b = "Some alteration";
+            var c = "Some alteration";
             a.Should().Be(245);
         }
         [Fact]
