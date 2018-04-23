@@ -8,7 +8,6 @@ matrix:
             - dotnet build --no-restore -v q
             - dotnet test --no-build --no-restore -v q src/EasyDesignPatterns.Tests/EasyDesignPatterns.Tests.csproj 
 
-    include: 
         - language: node_js
           cache:
               directories:
