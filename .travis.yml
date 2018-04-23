@@ -1,8 +1,24 @@
-language: csharp
-mono: none
-dotnet: 2.0.0
-cache: dotnet
-script:
-    - dotnet restore -v q
-    - dotnet build --no-restore -v q
-    - dotnet test --no-build --no-restore -v q src/EasyDesignPatterns.Tests/EasyDesignPatterns.Tests.csproj
+matrix:
+    include:
+        - language: csharp
+          mono: none
+          dotnet: 2.0.0
+          script:
+            - dotnet restore -v q
+            - dotnet build --no-restore -v q
+            - dotnet test --no-build --no-restore -v q src/EasyDesignPatterns.Tests/EasyDesignPatterns.Tests.csproj 
+
+    include:
+        - language: node_js
+          cache:
+              directories:
+                - "node_modules"  
+          node_js:
+            - "node"
+          before_install:
+            - cd src/EasyDesignPatterns.UI/
+          install:
+            - npm install
+          script:
+            - npm run test
+            - npm rum build
