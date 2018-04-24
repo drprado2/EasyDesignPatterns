@@ -1,8 +1,36 @@
-language: csharp
-mono: none
-dotnet: 2.0.0
-cache: dotnet
-script:
-    - dotnet restore -v q
-    - dotnet build --no-restore -v q
-    - dotnet test --no-build --no-restore -v q src/EasyDesignPatterns.Tests/EasyDesignPatterns.Tests.csproj
+jobs:
+    include:
+        - language: csharp
+          mono: none
+          dotnet: 2.0.0
+          before_script:
+            - chmod ugo+x scripts
+          - stage: build  
+            script: ./scripts/dotnet-build.sh
+          - stage: test  
+            script: ./scripts/dotnet-test.sh 
+            
+        - language: node_js
+          cache:
+              directories:
+                - "node_modules"  
+          node_js:
+            - "node"
+          before_install:
+            - chmod ugo+x scripts
+          install:
+            - ./scripts/frontend-install.sh
+          - stage: build  
+            script: ./scripts/frontend-build.sh
+          - stage: test  
+            - ./scripts/frontend-test.sh
+branches:
+  only:
+    - master
+    - develop
+after_success:
+  - ./scripts/docker-publish-travis.sh
+notifications:
+  email:
+    on_success: never
+    on_failure: always

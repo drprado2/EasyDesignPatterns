@@ -12,6 +12,6 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EasyDesignPatterns.API\EasyDesignPatterns.API.csproj" />
+    <ProjectReference Include="..\..\src\EasyDesignPatterns.API\EasyDesignPatterns.API.csproj" />
   </ItemGroup>
 </Project>
