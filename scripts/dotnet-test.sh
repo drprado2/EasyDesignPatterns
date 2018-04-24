@@ -1,0 +1,1 @@
+dotnet test --no-build --no-restore -v q tests/EasyDesignPatterns.Tests/EasyDesignPatterns.Tests.csproj
