@@ -12,13 +12,16 @@ case "$TRAVIS_BRANCH" in
     ;;    
 esac
 
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
+	docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
-docker build -f ./src/EasyDesignPatterns.API/Dockerfile.$DOCKER_ENV -t easy-design-patterns-api:$DOCKER_TAG ./src/EasyDesignPatterns.API --no-cache
-docker build -f ./src/EasyDesignPatterns.UI/Dockerfile.$DOCKER_ENV -t easy-design-patterns-ui:$DOCKER_TAG ./src/EasyDesignPatterns.UI --no-cache
+	docker build -f ./src/EasyDesignPatterns.API/Dockerfile.$DOCKER_ENV -t easy-design-patterns-api:$DOCKER_TAG ./src/EasyDesignPatterns.API --no-cache
+	docker build -f ./src/EasyDesignPatterns.UI/Dockerfile.$DOCKER_ENV -t easy-design-patterns-ui:$DOCKER_TAG ./src/EasyDesignPatterns.UI --no-cache
 
-docker tag easy-design-patterns-api:$DOCKER_TAG $DOCKER_USERNAME/easy-design-patterns-api:$DOCKER_TAG
-docker tag easy-design-patterns-ui:$DOCKER_TAG $DOCKER_USERNAME/easy-design-patterns-ui:$DOCKER_TAG
+	docker tag easy-design-patterns-api:$DOCKER_TAG $DOCKER_USERNAME/easy-design-patterns-api:$DOCKER_TAG
+	docker tag easy-design-patterns-ui:$DOCKER_TAG $DOCKER_USERNAME/easy-design-patterns-ui:$DOCKER_TAG
 
-docker push $DOCKER_USERNAME/easy-design-patterns-api:$DOCKER_TAG
-docker push $DOCKER_USERNAME/easy-design-patterns-ui:$DOCKER_TAG
+	docker push $DOCKER_USERNAME/easy-design-patterns-api:$DOCKER_TAG
+	docker push $DOCKER_USERNAME/easy-design-patterns-ui:$DOCKER_TAG
+fi
+
