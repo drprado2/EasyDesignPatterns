@@ -4,20 +4,29 @@ matrix:
           mono: none
           dotnet: 2.0.0
           script:
-            - dotnet restore -v q
-            - dotnet build --no-restore -v q
-            - dotnet test --no-build --no-restore -v q src/EasyDesignPatterns.Tests/EasyDesignPatterns.Tests.csproj 
-
+            - ./scripts/dotnet-build.sh
+            - ./scripts/dotnet-test.sh 
+            
         - language: node_js
           cache:
               directories:
                 - "node_modules"  
           node_js:
             - "node"
-          before_install:
-            - cd src/EasyDesignPatterns.UI/
           install:
-            - npm install
+            - ./scripts/frontend-install.sh
           script:
-            - npm run test
-            - npm rum build
+            - ./scripts/frontend-build.sh
+            - ./scripts/frontend-test.sh
+branches:
+  only:
+    - master
+    - develop
+before_script:
+  - chmod -R a+x scripts
+after_success:
+  - ./scripts/docker-publish-travis.sh
+notifications:
+  email:
+    on_success: never
+    on_failure: always
