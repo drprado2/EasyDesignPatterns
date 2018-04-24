@@ -24,10 +24,6 @@ jobs:
             script: ./scripts/frontend-build.sh
           - stage: test  
             - ./scripts/frontend-test.sh
-branches:
-  only:
-    - master
-    - develop
 after_success:
   - ./scripts/docker-publish-travis.sh
 notifications:
