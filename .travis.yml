@@ -4,11 +4,10 @@ jobs:
           mono: none
           dotnet: 2.0.0
           before_script:
-            - chmod ugo+x scripts
-          - stage: build  
-            script: ./scripts/dotnet-build.sh
-          - stage: test  
-            script: ./scripts/dotnet-test.sh 
+            - chmod ugo+x scripts/*
+          script:
+            - ./scripts/dotnet-build.sh
+            - ./scripts/dotnet-test.sh 
             
         - language: node_js
           cache:
@@ -17,15 +16,16 @@ jobs:
           node_js:
             - "node"
           before_install:
-            - chmod ugo+x scripts
+            - chmod ugo+x scripts/*
           install:
             - ./scripts/frontend-install.sh
-          - stage: build  
-            script: ./scripts/frontend-build.sh
-          - stage: test  
+          script:
+            - ./scripts/frontend-build.sh
             - ./scripts/frontend-test.sh
-after_success:
-  - ./scripts/docker-publish-travis.sh
+branches:
+  only:
+    - master
+    - develop
 notifications:
   email:
     on_success: never

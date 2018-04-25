@@ -1,1 +1,1 @@
-cd ../src/EasyDesignPatterns.UI/ && npm rum build
+cd src/EasyDesignPatterns.UI/ && npm rum build
