@@ -5,10 +5,9 @@ jobs:
           dotnet: 2.0.0
           before_script:
             - chmod ugo+x scripts/*
-        - stage: BUILD
-          script: ./scripts/dotnet-build.sh
-        - stage: UNIT_TESTS
-          script: ./scripts/dotnet-test.sh 
+          script:
+            - ./scripts/dotnet-build.sh
+            - ./scripts/dotnet-test.sh 
             
         - language: node_js
           cache:
@@ -20,11 +19,9 @@ jobs:
             - chmod ugo+x scripts/*
           install:
             - ./scripts/frontend-install.sh
-        - stage: BUILD  
-          script: ./scripts/frontend-build.sh
-        - stage: TESTS  
-          script: ./scripts/frontend-test.sh                            
-            
+          script:
+            - ./scripts/frontend-build.sh
+            - ./scripts/frontend-test.sh
 branches:
   only:
     - master
