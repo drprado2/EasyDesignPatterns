@@ -1,5 +1,6 @@
 jobs:
     include:
+        - stage: CSharp_API
         - language: csharp
           mono: none
           dotnet: 2.0.0
@@ -9,6 +10,8 @@ jobs:
             - ./scripts/dotnet-build.sh
             - ./scripts/dotnet-test.sh 
             
+    include:
+        - stage: NODE_FRONTEND
         - language: node_js
           cache:
               directories:
