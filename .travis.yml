@@ -10,7 +10,6 @@ jobs:
             - ./scripts/dotnet-build.sh
             - ./scripts/dotnet-test.sh 
             
-    include:
         - stage: NODE_FRONTEND
         - language: node_js
           cache:
