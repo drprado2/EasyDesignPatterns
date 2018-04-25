@@ -26,10 +26,6 @@ branches:
   only:
     - master
     - develop
-before_script:
-  - chmod -R a+x scripts
-after_success:
-  - ./scripts/docker-publish-travis.sh
 notifications:
   email:
     on_success: never
