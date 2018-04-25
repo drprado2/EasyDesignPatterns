@@ -4,7 +4,7 @@ matrix:
           mono: none
           dotnet: 2.0.0
           before_script:
-            - chmod ugo+x scripts
+            - chmod ugo+x scripts/*
           script:
             - ./scripts/dotnet-build.sh
             - ./scripts/dotnet-test.sh 
@@ -16,7 +16,7 @@ matrix:
           node_js:
             - "node"
           before_install:
-            - chmod ugo+x scripts
+            - chmod ugo+x scripts/*
           install:
             - ./scripts/frontend-install.sh
           script:
