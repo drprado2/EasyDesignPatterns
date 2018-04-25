@@ -22,6 +22,8 @@ jobs:
           script:
             - ./scripts/dotnet-build.sh
             - ./scripts/dotnet-test.sh 
+            - docker ps
+            - docker image ls
             
         - language: node_js
           cache:
@@ -36,6 +38,14 @@ jobs:
           script:
             - ./scripts/frontend-build.sh
             - ./scripts/frontend-test.sh
+
+deploy:
+- stage: Deploy  
+  provider: script
+  script:
+    - echo deployandoooo
+    - docker ps
+    
 branches:
   only:
     - master
