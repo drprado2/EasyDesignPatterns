@@ -1,13 +1,15 @@
 jobs:
     include:
+        - stage: API
         - language: csharp
           mono: none
           dotnet: 2.0.0
           before_script:
             - chmod ugo+x scripts/*
-          script:
-            - ./scripts/dotnet-build.sh
-            - ./scripts/dotnet-test.sh 
+        - stage: BUILD
+          script: ./scripts/dotnet-build.sh
+        - stage: UNIT_TESTS
+          script: ./scripts/dotnet-test.sh 
             
         - language: node_js
           cache:
