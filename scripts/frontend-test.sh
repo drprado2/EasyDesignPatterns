@@ -1,1 +1,1 @@
-cd ../src/EasyDesignPatterns.UI/ && npm run test
+cd src/EasyDesignPatterns.UI/ && npm run test

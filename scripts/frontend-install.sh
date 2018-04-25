@@ -1,1 +1,1 @@
-cd ../src/EasyDesignPatterns.UI/ && npm install
+cd src/EasyDesignPatterns.UI/ && npm install
