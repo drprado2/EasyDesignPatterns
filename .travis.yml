@@ -1,0 +1,53 @@
+sudo: required
+services:
+- docker
+before_script:
+- chmod ugo+x scripts/*
+jobs:
+  include:
+  - stage: integrations
+    language: generic
+    env: SERVICE=NODE_FRONTEND
+    script:
+    - "./scripts/frontend-before-install.sh"
+    - "./scripts/frontend-install.sh"
+    - "./scripts/frontend-build.sh"
+    - "./scripts/frontend-test.sh"
+  - stage: integrations
+    language: generic
+    env: SERVICE=C#_BACKEND
+    script:
+    - "./scripts/backend-before-install.sh"
+    - "./scripts/backend-build.sh"
+    - "./scripts/backend-test.sh"
+  - stage: build-docker-images
+    if: NOT type IS pull_request
+    language: generic
+    env: SERVICE=NODE_FRONTEND
+    script: "./scripts/generate-docker-frontend.sh"
+  - stage: build-docker-images
+    if: NOT type IS pull_request
+    language: generic
+    env: SERVICE=C#_BACKEND
+    script: "./scripts/generate-docker-backend.sh"
+  - stage: deploy
+    if: NOT type IS pull_request AND (branch = develop OR branch = master)
+    language: generic
+    before_script:
+    - chmod ugo+x scripts/*
+    - eval "$(ssh-agent -s)"
+    - chmod 600 ./deploy_rsa
+    - ssh-add ./deploy_rsa
+    env: SERVICE=AWS_DEPLOY
+    script: "./scripts/deploy.sh"
+branches:
+  only:
+  - master
+  - develop
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+before_install:
+- openssl aes-256-cbc -K $encrypted_803b59c1e074_key -iv $encrypted_803b59c1e074_iv
+  -in deploy_rsa.enc -out deploy_rsa -d

@@ -1,0 +1,1 @@
+docker container exec dotnet /bin/sh -c "cd source && dotnet restore -v q && dotnet build --no-restore -v q"

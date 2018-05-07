@@ -1,0 +1,1 @@
+docker container exec dotnet /bin/sh -c "cd source/tests/EasyDesignPatterns.Tests && dotnet test -v q --no-restore --no-build"

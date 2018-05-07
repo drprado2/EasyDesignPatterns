@@ -1,0 +1,21 @@
+version: '3.0'
+
+services:
+    frontend:
+        image: drprado2/easy-design-patterns-ui:dev
+        ports:
+            - 80:80
+        networks:
+            - main
+        depends_on:
+            - backend
+            
+    backend:
+        image: drprado2/easy-design-patterns-api:dev
+        ports:
+            - 5000:5000
+        networks:
+            - main
+    
+networks:
+    main:

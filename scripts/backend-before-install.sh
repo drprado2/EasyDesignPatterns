@@ -1,0 +1,1 @@
+docker run -d -v ${PWD}:/source -it --rm --name dotnet microsoft/dotnet /bin/sh
