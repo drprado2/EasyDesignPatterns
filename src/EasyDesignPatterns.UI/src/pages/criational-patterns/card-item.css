@@ -1,0 +1,23 @@
+.card-item {
+    height: 155px;
+    width: calc(25% - 8px);
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background-color: #f3f3f3;
+    color: #737373;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    position: relative;
+}
+
+.card-item-footer {
+    height: 40px;
+    background-color: #8bc34a;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.card-item-title {
+    padding: 10px;
+    font-weight: 700;
+}

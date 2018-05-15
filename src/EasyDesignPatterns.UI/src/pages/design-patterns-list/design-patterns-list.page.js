@@ -13,7 +13,7 @@ class DesignPatternsListPage extends Component{
 
     render() {
         const items = [
-            { label: "Padrões Criacionais", onClick: () => this.props.goLocation(urls.AbstractFactory) },
+            { label: "Padrões Criacionais", onClick: () => this.props.goLocation(urls.CreationalPatterns) },
             { label: "Padrões Estruturais", onClick: () => this.props.goLocation(urls.AbstractFactory) },
             { label: "Padrões Comportamentais", onClick: () => this.props.goLocation(urls.AbstractFactory) },
         ]
