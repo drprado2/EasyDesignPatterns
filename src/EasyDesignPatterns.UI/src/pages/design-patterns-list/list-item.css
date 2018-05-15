@@ -1,0 +1,19 @@
+.list-item {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #737383;
+    background-color: #f3f3f3;
+    width: 100%;
+    border-bottom: 3px solid #3b3b3b;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    color: #f3f3f3;
+    background-color: #737383;
+    transition: all 0.24s linear;
+}

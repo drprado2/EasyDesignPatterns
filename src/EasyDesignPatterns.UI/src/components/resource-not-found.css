@@ -1,0 +1,23 @@
+.resource-not-found {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.resource-not-found-title {
+    font-size: 1.5em;
+    flex-grow: 1;
+}
+
+.resource-not-found-message {
+    font-size: 1em;
+    flex-grow: 1;
+    color: black;
+    cursor: pointer;
+}
+
+.resource-not-found-message:hover {
+    text-decoration: underline;
+}

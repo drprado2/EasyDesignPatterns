@@ -1,0 +1,29 @@
+.lateral-left {
+    grid-area: lateral-left;
+    background-color: #3b3b3b;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 20px;
+    color: #fcfcfc;
+    flex-direction: column;
+    font-size: 1.3em;
+}
+
+.lateral-left-arrow {
+    font-size: 2em;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.lateral-left-arrow:hover {
+    opacity: 0.6;
+    background-color: #e9e9e9;
+    color: #3b3b3b;
+    transition: all 0.244s linear;
+}
+
+

@@ -1,0 +1,7 @@
+.grid-layout {
+    display: grid;
+    grid-template:
+        "header header header" 100px
+        "lateral-left center lateral-right" calc(100vh - 100px)
+        / calc(50vw - 400px) minmax(300px, 800px) calc(50vw - 400px)
+}
