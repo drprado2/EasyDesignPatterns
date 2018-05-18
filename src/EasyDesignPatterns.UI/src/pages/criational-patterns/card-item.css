@@ -7,6 +7,11 @@
     color: #737373;
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
     position: relative;
+    min-width: 100px;
+}
+
+.card-item:nth-child(4n){
+    margin-right: 0px;
 }
 
 .card-item-footer {
@@ -20,4 +25,10 @@
 .card-item-title {
     padding: 10px;
     font-weight: 700;
+}
+
+.card-item:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+    transition: box-shadow linear 0.12s;
 }

@@ -7,4 +7,11 @@
     color: #ffffff;
     font-size: 3em;
     font-width: bold;
+    position: relative;
 }
+
+.header-return-button {
+    position: absolute;
+    left: 10px;
+}
+

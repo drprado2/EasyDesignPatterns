@@ -1,4 +1,4 @@
-import {actionsTypes} from '../actions/action-types';
+import {urlsList} from '../page-urls';
 
 const INITIAL_STATE={
     routesStack: ["Design Patterns"],
@@ -12,23 +12,13 @@ const showReturnArrow = routesStack => routesStack.length > 1;
 
 export const locationReducer = (state=INITIAL_STATE, action) => {
     switch(action.type){
-        case(actionsTypes.GO_LOCATION):{
-            const routesStack = state.routesStack.concat([action.newLocation]);
+        case("LOCATION_CHANGE"):{
+            const routesStack = urlsList
+              .sort((a, b) => a.length < b.length ? -1 : 1)
+              .filter(x => action.route.match(x.url) && action.route.length >= x.url.length)
+              .map(x => x.label);
             const showArrow =  showReturnArrow(routesStack);
-            return {...state, routesStack: routesStack, actualRoute: calculateRoute(routesStack), showReturnArrow: showArrow};
-            break;
-        }
-        case(actionsTypes.RETURN_LOCATION):{
-            const routesStack = state.routesStack.slice(0, state.routesStack.length - 1);
-            const showArrow =  showReturnArrow(routesStack);
-            return {...state, routesStack: routesStack, actualRoute: calculateRoute(routesStack), showReturnArrow: showArrow};
-            break;
-        }
-        case(actionsTypes.GO_HOME):{
-            const routesStack = ["Design Patterns"];
-            const showArrow =  showReturnArrow(routesStack);
-            return {...state, routesStack: routesStack, actualRoute: calculateRoute(routesStack), showReturnArrow: showArrow};
-            break;
+            return {...state, routesStack, actualRoute: calculateRoute(routesStack), showReturnArrow: showArrow}
         }
         default: return {...state}
     }

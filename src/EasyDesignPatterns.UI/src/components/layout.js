@@ -13,7 +13,7 @@ const Layout = props => {
 
     return (
         <GridLayout>
-            <Header/>
+            <Header returnLocation={props.returnLocation} showReturnArrow={props.showReturnArrow}/>
             <LateralLeft returnLocation={props.returnLocation} showReturnArrow={props.showReturnArrow} actualRoute={props.actualRoute} />
             <CenterLayout>{props.children}</CenterLayout>
             <LateralRight/>

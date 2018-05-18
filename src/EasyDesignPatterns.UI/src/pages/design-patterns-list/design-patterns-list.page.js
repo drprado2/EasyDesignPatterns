@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import List from './list';
 import {goLocation} from '../../actions/location-actions'
-import urls from '../../page-urls';
+import {urls} from '../../page-urls';
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
 import {withRouter} from 'react-router-dom';

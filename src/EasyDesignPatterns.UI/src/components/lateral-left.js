@@ -1,16 +1,14 @@
 import React from 'react';
 import './lateral-left.css';
 import PropTypes from 'prop-types'
+import ReturnRow from './return-row';
 
 const LateralLeft = props => {
 
     return (
         <div className="lateral-left">
             <div>{props.actualRoute}</div>
-            {props.showReturnArrow
-                ? <i onClick={props.returnLocation} className="fas fa-arrow-left lateral-left-arrow"></i>
-                : null
-            }
+            <ReturnRow returnLocation={props.returnLocation} showReturnArrow={props.showReturnArrow} />
         </div>
     )
 }

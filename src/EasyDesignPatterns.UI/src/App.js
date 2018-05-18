@@ -8,6 +8,8 @@ import Layout from './components/layout';
 import urls from './page-urls';
 import {goHome} from './actions/location-actions';
 
+history.block((location, action) => store.dispatch({type: "LOCATION_CHANGE", route: location.pathname, action}));
+
 class App extends Component {
   componentDidMount(){
       store.dispatch(goHome())

@@ -1,1 +1,1 @@
-docker container exec nodejs /bin/sh -c "cd source/src/EasyDesignPatterns.UI && npm install"
+docker container exec nodejs /bin/sh -c "cd source/src/EasyDesignPatterns.UI && su && npm install"

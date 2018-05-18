@@ -18,6 +18,10 @@ class CreationalPatternsPage extends Component{
         <CardItem>Abstract Factory</CardItem>
         <CardItem>Abstract Factory</CardItem>
         <CardItem>Abstract Factory</CardItem>
+        <CardItem>Abstract Factory</CardItem>
+        <CardItem>Abstract Factory</CardItem>
+        <CardItem>Abstract Factory</CardItem>
+        <CardItem>Abstract Factory</CardItem>
       </CardList>
     )
   }

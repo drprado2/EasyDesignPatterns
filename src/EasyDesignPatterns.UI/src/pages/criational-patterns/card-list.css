@@ -1,5 +1,5 @@
 .card-list {
-    padding: 40px;
+    padding: 40px 80px;
     display: flex;
     flex-direction: row;
     align-items: start;
