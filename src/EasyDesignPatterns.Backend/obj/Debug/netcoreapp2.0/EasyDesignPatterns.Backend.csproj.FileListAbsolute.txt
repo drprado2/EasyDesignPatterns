@@ -1,0 +1,11 @@
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\bin\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.deps.json
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\bin\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.runtimeconfig.json
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\bin\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.runtimeconfig.dev.json
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\bin\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.dll
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\bin\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.pdb
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\obj\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.csproj.CoreCompileInputs.cache
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\obj\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.AssemblyInfoInputs.cache
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\obj\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.AssemblyInfo.cs
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\obj\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.dll
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\obj\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.pdb
+C:\Users\adriano.oliveira\Documents\Projetos\EasyDesignPatterns\src\EasyDesignPatterns.Backend\obj\Debug\netcoreapp2.0\EasyDesignPatterns.Backend.csprojAssemblyReference.cache
