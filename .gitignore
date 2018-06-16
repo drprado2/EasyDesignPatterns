@@ -62,13 +62,7 @@ typings/
 package-lock.json
 yarn.lock
 
-src/EasyDesignPatterns.API/bin/
-src/EasyDesignPatterns.API/obj/
-
-tests/EasyDesignPatterns.Tests/bin/
-tests/EasyDesignPatterns.tests/obj/
-
-src/EasyDesignPatterns.Core/bin/
-src/EasyDesignPatterns.Core/obj/
+src/EasyDesignPatterns.Backend/bin/
+src/EasyDesignPatterns.Backend/obj/
 
 EasyDesignPatterns.sln.DotSettings.user
