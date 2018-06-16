@@ -59,6 +59,8 @@ typings/
 
 .idea
 
+.vs
+
 package-lock.json
 yarn.lock
 
